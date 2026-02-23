@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", "Arial", sans-serif;
+}
+
+.material-icons {
+  font-size: 30px;
+}
+
+/* navigation bar section */
+.navbar {
+  height: 56px;
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo i {
+  padding: 8px;
+}
+
+.logo img {
+  padding: 18px 14px 18px 16px;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 680px;
+}
+
+.search {
+  width: 620px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 40px;
+}
+
+.search button {
+  width: 10%;
+  height: 100%;
+  border: none;
+  border-left: 1px solid black;
+  border-radius: 0 40px 40px 0;
+}
+
+.search-bar input {
+  width: 90%;
+  padding: 0px 4px 0px 16px;
+  border: none;
+  border-radius: 40px 0 0 40px;
+}
+
+.search-bar > i {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  background-color: grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-actions {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 6px;
+}
+
+.user-actions span {
+  width: 97.18px;
+  height: 36px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: grey;
+  border-radius: 20px;
+  padding: 0px 10px 0 10px;
+}
+
+/****************Main section**************/
+
+main {
+  height: calc(100vh - 56px);
+  display: flex;
+}
+/*Sidebar sub section */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+  height: 100%;
+}
+
+.sidebar-section {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 12px;
+}
+
+.sidebar-section .label {
+  height: 40px;
+  width: 204px;
+  display: flex;
+  align-items: center;
+  color: #0f0f0f;
+  font-weight: 550;
+  gap: 10px;
+}
+
+.label img {
+  height: 16px;
+  width: 16px;
+}
+
+.sidebar-content {
+  width: 204px;
+  height: 40px;
+  padding: 0 12px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  font-size: 14px;
+}
+
+.sidebar-content:hover {
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.home {
+  background: #f2f2f2;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/*video section*/
+.content {
+  width: calc(100vw - 240px);
+  height: 100%;
+}
