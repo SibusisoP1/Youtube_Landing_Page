@@ -17,25 +17,33 @@
     />
   </head>
   <body>
+    <input type="checkbox" id="sidebar-toggle" hidden />
     <nav class="navbar">
       <div class="logo">
-        <i class="material-icons">menu</i>
+        <label for="sidebar-toggle">
+          <i class="material-icons">menu</i>
+        </label>
         <img src="Resources/logo.svg" alt="YouTube Logo" />
       </div>
       <div class="search-bar">
         <div class="search">
           <input type="text" placeholder="Search" />
-          <button><i class="large material-icons">search</i></button>
+          <button><img src="Resources/search.svg" alt="Search" /></button>
         </div>
-        <i class="large material-icons">keyboard_voice</i>
+        <img src="Resources/record-icon.svg" alt="Voice Search" />
       </div>
       <div class="user-actions">
         <span><i class="large material-icons">add</i> Create</span>
-        <i class="large material-icons">notifications</i>
-        <i class="large material-icons">account_circle</i>
+        <img src="Resources/notification-icon.svg" alt="Notifications" />
+        <img
+          class="profile-pic"
+          src="Resources/myProfile.png"
+          alt="User Profile"
+          class="profile-pic"
+        />
       </div>
     </nav>
-    <main>
+    <main class="main">
       <div class="sidebar">
         <div class="sidebar-section">
           <span class="sidebar-content home"
@@ -47,11 +55,33 @@
         </div>
         <div class="sidebar-section">
           <span class="label">
-            Subscriptions <img src="Resources/arrow.svg"
+            <i class="material-icons">subscriptions</i> Subscriptions
+            <img src="Resources/arrow.svg"
           /></span>
+          <span class="sub-profile sidebar-content"
+            ><img src="Resources/zaio.png" alt="zaio" /> Zaio</span
+          >
+          <span class="sub-profile sidebar-content"
+            ><img src="Resources/w3school.png" alt="w3school" />
+            W3Schools.com</span
+          >
+          <span class="sub-profile sidebar-content"
+            ><img src="Resources/vscode.png" alt="vscode" /> Visual Studio
+            Code</span
+          >
+          <span class="sub-profile sidebar-content"
+            ><img src="Resources/free-code-camp.png" alt="freeCodeCamp" />
+            freeCodeCamp.org</span
+          >
+          <span class="sidebar-content"
+            ><i class="material-icons">keyboard_arrow_down</i> Show More</span
+          >
         </div>
         <div class="sidebar-section">
-          <span class="label"> You <img src="Resources/arrow.svg" /></span>
+          <span class="label">
+            <i class="material-icons">account_circle</i> You
+            <img src="Resources/arrow.svg"
+          /></span>
           <span class="sidebar-content"
             ><i class="material-icons">history</i> History</span
           >
@@ -129,7 +159,25 @@
             feedback</span
           >
         </div>
-        <div class="sidebar-section"></div>
+        <div class="sidebar-footer-section">
+          <div class="upper-footer">
+            <span>About</span>
+            <span>Press</span>
+            <span>Copyright</span>
+            <span>Contact us</span>
+            <span>Creators</span>
+            <span>Advertise</span>
+            <span>Developers</span>
+          </div>
+          <div class="lower-footer">
+            <span>Terms</span>
+            <span>Privacy</span>
+            <span>Policy & Safety</span>
+            <span>How YouTube works</span>
+            <span>Test new features</span>
+          </div>
+          <span>© 2026 Google LLC</span>
+        </div>
       </div>
       <div class="content"></div>
     </main>
