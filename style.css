@@ -182,7 +182,10 @@ body {
 }
 
 #sidebar-toggle:checked ~ .main .sidebar-section:nth-child(2) .sub-profile,
-#sidebar-toggle:checked ~ .main .sidebar-section:nth-child(2) .sidebar-content:has(i) {
+#sidebar-toggle:checked
+  ~ .main
+  .sidebar-section:nth-child(2)
+  .sidebar-content:has(i) {
   display: none;
 }
 
@@ -343,7 +346,90 @@ body {
   line-height: 18px;
 }
 /*video section*/
+
+/* feed bar*/
+.feed-bar {
+  width: 1281px;
+  height: 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 24px;
+}
+
+.feed-bar .material-icons {
+  background-color: #f2f2f2;
+  border-radius: 20px;
+}
+
+.feed-bar .all {
+  background-color: black;
+  color: white;
+}
+
+.feed-bar span {
+  height: 32px;
+  min-width: 12px;
+  background-color: #f2f2f2;
+  border-radius: 8px;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+/*Videos*/
+
 .content {
   width: calc(100vw - 240px);
   height: 100%;
+}
+
+/* Create the YouTube Grid */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.video-card .video-info {
+  display: flex;
+  width: 100%;
+  gap: 15px;
+  align-items: center;
+}
+
+.video-info img {
+  height: 36px;
+  width: 36px;
+  border-radius: 12px;
+}
+
+.thumbnail-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #000;
+  margin-bottom: 12px;
+}
+
+/* Stack both images on top of each other */
+.static-layer,
+.gif-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+/* Hide the static image on hover to reveal the GIF underneath */
+.video-card:hover .static-layer {
+  opacity: 0;
 }
