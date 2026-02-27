@@ -400,6 +400,7 @@ body {
 .video-card {
   height: 349.14px;
   width: 400.25px;
+  cursor: pointer;
 }
 
 .video-card .video-info {
@@ -458,4 +459,63 @@ body {
 
 .text-title h3 {
   font-weight: 530;
+}
+
+/* Shorts section */
+.shorts-section {
+  height: 533.025px;
+  width: 1280.8px;
+  padding-left: 20px;
+}
+
+.shorts-section .shorts-grid {
+  height: 429.025px;
+  width: 1248.8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.shorts-section .shorts-grid .shorts-card {
+  width: 233.75px;
+  height: 426.63px;
+  cursor: pointer;
+}
+
+.shorts-thumbnail img {
+  height: 350.63px;
+  width: 233.75px;
+  border-radius: 10px;
+}
+
+.shorts-section .shorts-title {
+  width: 1224.8px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 0px 16px 8px;
+}
+
+.shorts-title span {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0f0f0f;
+}
+
+.short-info .shorts-text-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.short-info .shorts-text-title h3 {
+  height: 42px;
+  width: 197.75px;
+  font-size: 16px;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.short-info .shorts-text-title .material-icons {
+  height: 36px;
+  width: 36px;
 }
