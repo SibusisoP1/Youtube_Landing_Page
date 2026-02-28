@@ -35,12 +35,44 @@
       <div class="user-actions">
         <span><i class="large material-icons">add</i> Create</span>
         <img src="Resources/notification-icon.svg" alt="Notifications" />
-        <img
-          class="profile-pic"
-          src="Resources/myProfile.png"
-          alt="User Profile"
-          class="profile-pic"
-        />
+        <div class="profile-menu-wrap">
+          <input type="checkbox" id="profile-menu-toggle" hidden />
+          <label
+            for="profile-menu-toggle"
+            class="profile-pic-label"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <img
+              class="profile-pic"
+              src="Resources/myProfile.png"
+              alt="Your account"
+            />
+          </label>
+          <div class="profile-dropdown" role="menu">
+            <div class="profile-dropdown-header">
+              <img class="profile-pic" src="Resources/myProfile.png" alt="" />
+              <div class="profile-dropdown-name">
+                <span class="name">Your Channel</span>
+                <span class="email">@yourchannel</span>
+              </div>
+            </div>
+            <div class="profile-dropdown-divider"></div>
+            <a href="#channel" class="profile-dropdown-item" role="menuitem">
+              <i class="material-icons">person</i> Your channel
+            </a>
+            <a href="#studio" class="profile-dropdown-item" role="menuitem">
+              <i class="material-icons">dashboard</i> YouTube Studio
+            </a>
+            <a href="#switch" class="profile-dropdown-item" role="menuitem">
+              <i class="material-icons">switch_account</i> Switch account
+            </a>
+            <div class="profile-dropdown-divider"></div>
+            <a href="#signout" class="profile-dropdown-item" role="menuitem">
+              <i class="material-icons">logout</i> Sign out
+            </a>
+          </div>
+        </div>
       </div>
     </nav>
     <main class="main">
@@ -200,6 +232,13 @@
         <div class="video-grid">
           <div class="video-card">
             <div class="thumbnail-container">
+              <div class="thumb-overlay" aria-hidden="true">
+                <span class="thumb-controls">
+                  <i class="material-icons" title="Volume">volume_up</i>
+                  <i class="material-icons" title="Subtitles">closed_caption</i>
+                </span>
+                <span class="thumb-duration">10:45</span>
+              </div>
               <img
                 class="gif-layer"
                 src="Resources/LEARN_HOW_TO_USE_THE_ZAIO_PLATFORM_AND_START_YOUR_CODING_JOURNEY.gif"
@@ -225,6 +264,13 @@
           </div>
           <div class="video-card">
             <div class="thumbnail-container">
+              <div class="thumb-overlay" aria-hidden="true">
+                <span class="thumb-controls">
+                  <i class="material-icons" title="Volume">volume_up</i>
+                  <i class="material-icons" title="Subtitles">closed_caption</i>
+                </span>
+                <span class="thumb-duration">8:22</span>
+              </div>
               <img
                 class="gif-layer"
                 src="Resources/mqdefault_6s.webp"
@@ -246,6 +292,13 @@
           </div>
           <div class="video-card">
             <div class="thumbnail-container">
+              <div class="thumb-overlay" aria-hidden="true">
+                <span class="thumb-controls">
+                  <i class="material-icons" title="Volume">volume_up</i>
+                  <i class="material-icons" title="Subtitles">closed_caption</i>
+                </span>
+                <span class="thumb-duration">12:03</span>
+              </div>
               <img
                 class="gif-layer"
                 src="Resources/w3gif1.webp"
@@ -348,6 +401,13 @@
         <div class="video-grid">
           <div class="video-card">
             <div class="thumbnail-container">
+              <div class="thumb-overlay" aria-hidden="true">
+                <span class="thumb-controls">
+                  <i class="material-icons" title="Volume">volume_up</i>
+                  <i class="material-icons" title="Subtitles">closed_caption</i>
+                </span>
+                <span class="thumb-duration">10:45</span>
+              </div>
               <img
                 class="gif-layer"
                 src="Resources/LEARN_HOW_TO_USE_THE_ZAIO_PLATFORM_AND_START_YOUR_CODING_JOURNEY.gif"
@@ -373,6 +433,13 @@
           </div>
           <div class="video-card">
             <div class="thumbnail-container">
+              <div class="thumb-overlay" aria-hidden="true">
+                <span class="thumb-controls">
+                  <i class="material-icons" title="Volume">volume_up</i>
+                  <i class="material-icons" title="Subtitles">closed_caption</i>
+                </span>
+                <span class="thumb-duration">8:22</span>
+              </div>
               <img
                 class="gif-layer"
                 src="Resources/mqdefault_6s.webp"
@@ -394,6 +461,13 @@
           </div>
           <div class="video-card">
             <div class="thumbnail-container">
+              <div class="thumb-overlay" aria-hidden="true">
+                <span class="thumb-controls">
+                  <i class="material-icons" title="Volume">volume_up</i>
+                  <i class="material-icons" title="Subtitles">closed_caption</i>
+                </span>
+                <span class="thumb-duration">12:03</span>
+              </div>
               <img
                 class="gif-layer"
                 src="Resources/w3gif1.webp"
