@@ -107,18 +107,32 @@ body {
   padding: 0px 10px 0 10px;
 }
 
-/* Profile dropdown (HTML + CSS only, checkbox hack) */
+/* Profile dropdown (HTML + CSS only, using <details> + <summary> – different from sidebar’s checkbox) */
 .profile-menu-wrap {
   position: relative;
 }
 
-.profile-pic-label {
+.profile-details {
+  position: relative;
+}
+
+/* Clickable profile pic: no checkbox, uses native <summary> */
+.profile-summary {
+  list-style: none;
   cursor: pointer;
   display: block;
   line-height: 0;
 }
 
-.profile-pic-label:hover {
+.profile-summary::-webkit-details-marker {
+  display: none;
+}
+
+.profile-summary::marker {
+  display: none;
+}
+
+.profile-summary:hover {
   opacity: 0.9;
 }
 
@@ -126,7 +140,7 @@ body {
   position: absolute;
   top: calc(100% + 8px);
   right: 0;
-  min-width: 260px;
+  width: 340px;
   background: #fff;
   border-radius: 12px;
   box-shadow:
@@ -141,7 +155,8 @@ body {
   z-index: 100;
 }
 
-#profile-menu-toggle:checked ~ .profile-dropdown {
+/* Open state: uses [open] attribute (details/summary), not :checked */
+.profile-details[open] .profile-dropdown {
   opacity: 1;
   visibility: visible;
 }
@@ -153,10 +168,14 @@ body {
   padding: 12px 16px 16px;
 }
 
+/* Header profile pic in same 22px column as row icons */
 .profile-dropdown-header .profile-pic {
-  height: 40px;
-  width: 40px;
+  width: 22px;
+  height: 22px;
+  min-width: 22px;
+  flex-shrink: 0;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 .profile-dropdown-name {
@@ -167,7 +186,7 @@ body {
 
 .profile-dropdown-name .name {
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 400;
   color: #0f0f0f;
 }
 
@@ -182,12 +201,28 @@ body {
   margin: 8px 0;
 }
 
+.profile-dropdown-block {
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 4px 0;
+  margin: 4px 8px 4px 0;
+}
+
+.profile-dropdown-block .profile-dropdown-item {
+  margin: 0 8px 0 0;
+  border-radius: 6px;
+}
+
+.profile-dropdown-block .profile-dropdown-item:hover {
+  background: #f0f0f0;
+}
+
 .profile-dropdown-item {
   display: flex;
-  align-items: center;
-  gap: 12px;
+  gap: 8px;
   padding: 10px 16px;
   font-size: 14px;
+  font-weight: 400;
   color: #0f0f0f;
   text-decoration: none;
   transition: background-color 0.1s ease;
@@ -200,6 +235,72 @@ body {
 .profile-dropdown-item .material-icons {
   font-size: 22px;
   color: #606060;
+}
+
+/* All icons before text in one straight vertical line (header pic + row icons) */
+.profile-dropdown-item > .material-icons:not(.profile-dropdown-arrow),
+.profile-dropdown-item-with-arrow span .material-icons {
+  width: 22px;
+  min-width: 22px;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-dropdown-item-with-arrow {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 400;
+  background-color: #fff !important;
+}
+
+.profile-dropdown-item-with-arrow:hover {
+  background-color: #f2f2f2 !important;
+}
+
+.profile-dropdown-item-with-arrow span {
+  display: flex;
+  gap: 8px;
+  min-width: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  background: none !important;
+  padding: 0px 0px;
+  font-weight: 400;
+}
+
+.profile-dropdown-arrow {
+  margin-left: 16px;
+  font-size: 20px !important;
+  color: #909090 !important;
+}
+
+.profile-dropdown-item-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profile-dropdown-item-row span:first-of-type {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profile-dropdown-value {
+  font-size: 13px;
+  color: #606060;
+  margin-left: 16px;
+}
+
+.profile-dropdown-block-settings .profile-dropdown-item {
+  margin: 0 8px 0 0;
+  border-radius: 6px;
+}
+
+.profile-dropdown-block-settings .profile-dropdown-item:hover {
+  background: #f0f0f0;
 }
 
 /****************Main section**************/
