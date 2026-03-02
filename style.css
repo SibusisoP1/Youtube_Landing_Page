@@ -184,15 +184,19 @@ body {
   gap: 2px;
 }
 
+.profile-dropdown-name span {
+  background: transparent !important;
+}
+
 .profile-dropdown-name .name {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400;
   color: #0f0f0f;
 }
 
 .profile-dropdown-name .email {
-  font-size: 12px;
-  color: #606060;
+  font-size: 14px;
+  color: blue;
 }
 
 .profile-dropdown-divider {
@@ -280,6 +284,23 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.google-account {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  white-space: nowrap;
+  font-size: 13px;
+  font-weight: 400 !important;
+  color: #0f0f0f;
+  background-color: transparent !important;
+  padding: 0px 0px 0px 0px !important;
+}
+
+.google-account img {
+  height: 20px;
+  width: 20px;
 }
 
 .profile-dropdown-item-row span:first-of-type {
